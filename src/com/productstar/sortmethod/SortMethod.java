@@ -22,6 +22,7 @@ public class SortMethod {
 
 
         long t_1_1 = System.currentTimeMillis();
+        int [] arrayCopy_1 = Arrays.copyOf(array, array.length);
         bubbleSort(array);
         long t_1_2 = System.currentTimeMillis();
         System.out.println(t_1_2 - t_1_1);
@@ -31,7 +32,8 @@ public class SortMethod {
 
 
         long t_2_1 = System.currentTimeMillis();
-        insertionSearch(array);
+        int [] arrayCopy_2 = Arrays.copyOf(array, array.length);
+        selectionSort(array);
         long t_2_2 = System.currentTimeMillis();
         System.out.println(t_2_2 - t_2_1);
         System.out.println(Arrays.toString(array));
@@ -50,7 +52,7 @@ public class SortMethod {
             }
         }
     }
-    public static void insertionSearch(int [] array) {
+    public static void selectionSort(int [] array) {
         for (int i = 0; i < array.length - 1; i++) {
            int min = i;
             for (int j = i + 1; j < array.length ; j++)
